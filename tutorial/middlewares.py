@@ -1,3 +1,6 @@
+# pylint: disable=unused-import, missing-class-docstring, missing-function-docstring, unused-argument, use-yield-from, consider-using-f-string
+
+
 # Define here the models for your spider middleware
 #
 # See documentation in:

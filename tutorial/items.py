@@ -1,3 +1,6 @@
+# pylint: disable=missing-class-docstring
+
+
 # Define here the models for your scraped items
 #
 # See documentation in:

@@ -1,3 +1,6 @@
+# pylint: disable=line-too-long
+
+
 # Scrapy settings for tutorial project
 #
 # For simplicity, this file contains only settings considered important or
