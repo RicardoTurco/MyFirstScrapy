@@ -62,6 +62,14 @@ Project structure (considering folder start in `my-first-scrapy`):
 
 ```
 ├── my-first-scrapy
+│   ├── tests
+│   │   ├── tutorial
+│   │   │    ├── spiders
+│   │   │    │    ├── __init__.py
+│   │   │    │    ├── test_quotes_spider.py
+│   │   │    ├── __init__.py
+│   │   ├── __init__.py
+│   │   ├── conftest.py
 │   ├── tutorial
 │   │   ├── spiders
 │   │   │    ├── __init__.py
@@ -120,10 +128,10 @@ make pylint
 Formats the code according to [PEP-8](https://peps.python.org/pep-0008/) standards.
 
 ```
-black --check . (displays which files need adjustments in code formatting);
-black --check --diff <path_to_file> (displays the necessary code formmating changes in a SPECIFIC file - manual adjust);
-black . (performs code formatting "automatically" in ALL files);
-black <path_to_file> (performs code formatting "automatically" in a SPECIFIC file);
+poetry run black --check . (displays which files need adjustments in code formatting);
+poetry run black --check --diff <path_to_file> (displays the necessary code formmating changes in a SPECIFIC file - manual adjust);
+poetry run black . (performs code formatting "automatically" in ALL files);
+poetry run black <path_to_file> (performs code formatting "automatically" in a SPECIFIC file);
 ```
 
 ### Isort
@@ -131,10 +139,10 @@ black <path_to_file> (performs code formatting "automatically" in a SPECIFIC fil
 Performs adjustments in "imports" of project - [ISORT](https://pycqa.github.io/isort/).
 
 ```
-isort --check . (displays wich files need adjustments in imports);
-isort --check --diff <path_to_file> (displays the necessary adjustments in imports in a SPECIFIC file - manual adjust);
-isort . (performs adjustments in imports "automatically" in ALL files);
-isort <path_to_file> (performs adjustments in imports "automatically" in a SPECIFIC file);
+poetry run isort --check . (displays wich files need adjustments in imports);
+poetry run isort --check --diff <path_to_file> (displays the necessary adjustments in imports in a SPECIFIC file - manual adjust);
+poetry run isort . (performs adjustments in imports "automatically" in ALL files);
+poetry run isort <path_to_file> (performs adjustments in imports "automatically" in a SPECIFIC file);
 ```
 
 ### Coverage
