@@ -25,7 +25,7 @@ class QuotesSpider(scrapy.Spider):
         filename = f"quotes-{page}.html"
         Path(filename).write_bytes(response.body)
         self.log(f"Saved file {filename}")
-        
+
         for quote in response.xpath("//div[@class='quote']"):
             item = {
                 "text": quote.xpath(".//span[@class='text']/text()").get(),
