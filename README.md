@@ -50,9 +50,9 @@ f) To list crawlers available:
 - scrapy list
 
 
-g) To execute any crawler:
+g) To execute crawler that go generate the files:
 
-- scrapy crawl <name_of_crawler>
+- scrapy crawl quotes
 
 ```
 
