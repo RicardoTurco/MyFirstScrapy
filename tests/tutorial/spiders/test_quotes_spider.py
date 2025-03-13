@@ -23,11 +23,13 @@ def test_parse_quote(spider, mock_html_page):
     results = list(spider.parse(mock_html_page))
 
     items = [item for item in results if isinstance(item, dict)]
+
+    # pylint: disable=line-too-long
     expected_item = {
         "text": "“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”",
         "author": "Albert Einstein",
         "tags": ["change", "deep-thoughts", "thinking", "world"],
-    }
+    }  # pylint: enable=line-too-long
 
     assert len(items) == 1
     assert items[0] == expected_item

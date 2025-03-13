@@ -16,6 +16,11 @@ def spider():
 
 @pytest.fixture
 def mock_html_page():
+    """
+    Mock of html page.
+
+    :return: Mock of html page;
+    """
     html_content = """
     <html>
         <body>
