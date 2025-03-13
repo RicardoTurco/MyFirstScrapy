@@ -25,3 +25,15 @@ class QuotesSpider(scrapy.Spider):
         filename = f"quotes-{page}.html"
         Path(filename).write_bytes(response.body)
         self.log(f"Saved file {filename}")
+        
+        for quote in response.xpath("//div[@class='quote']"):
+            item = {
+                "text": quote.xpath(".//span[@class='text']/text()").get(),
+                "author": quote.xpath(".//small[@class='author']/text()").get(),
+                "tags": quote.xpath(".//div[@class='tags']/a/text()").getall(),
+            }
+            yield item
+
+        next_page = response.xpath("//li[@class='next']/a/@href").get()
+        if next_page:
+            yield response.follow(next_page, callback=self.parse)
