@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "my-first-scrapy"
+version = "0.1.0"
+description = ""
+authors = ["RicardoTurco <ricturco@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+scrapy = "2.11.2"
+scrapy-fake-useragent = "1.4.4"
+scrapy-zyte-api = "0.28.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "8.32.0"
+pytest-cov = "^6.0.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+pylint = "3.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
